@@ -41,7 +41,6 @@ bool shoot(char board[10][10], int row, int col, bool &sunk) {
     } else {
         board[row][col] = 'o';
         cout << "Мимо!\n";
-        waitEnter();
         clearScreen();
     }
     return true;
