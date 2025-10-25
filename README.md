@@ -8,3 +8,7 @@ cd build
 cmake ..
 make
 ./battleship
+```
+
+Цвета отображаются только на Linux и macOS.
+На Windows используйте WSL.
