@@ -1,6 +1,11 @@
 #include <cmath>
 #include "../include/board.h"
 
+#define RED "\033[31m"
+#define BLUE "\033[34m"
+#define GREEN "\033[32m"
+#define RESET "\033[0m"
+
 void initBoard(char board[SIZE][SIZE]) {
     for (int i = 0; i < SIZE; ++i)
         for (int j = 0; j < SIZE; ++j)
@@ -18,7 +23,11 @@ void printBoard(char board[SIZE][SIZE], bool showShips) {
         for (int j = 0; j < SIZE; ++j) {
             char c = board[i][j];
             if (!showShips && c == '#') c = '.';
-            cout << c << ' ';
+
+            if (c == 'X') cout << RED << c << RESET << ' ';
+            else if (c == 'o') cout << BLUE << c << RESET << ' ';
+            else if (c == '#') cout << GREEN << c << RESET << ' ';
+            else cout << c << ' ';
         }
         cout << endl;
     }
