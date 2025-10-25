@@ -6,4 +6,6 @@ include_directories(include)
 add_executable(battleship
     src/main.cpp
     src/board.cpp
+    src/ship.cpp
+    src/game.cpp
 )
